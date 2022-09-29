@@ -33,7 +33,7 @@ jobs:
       #- name: install libboost-filesystem
       #  run: sudo apt-get update && sudo apt-get install libboost-filesystem-dev -y
       - name: install googletest
-        run: sudo apt install googletest
+        run: sudo apt-get update && sudo apt install googletest
       
       - name: Run a one-line script
         run: cmake .
