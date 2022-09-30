@@ -8,13 +8,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS "-Wall -pthread")
 
-
 set(targetName ${PROJECT_NAME})
-
 
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIR})
-
 
 IF (NOT DEFINED G_TEST_RUN)
     SET(G_TEST_RUN 0 )
