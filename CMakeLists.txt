@@ -30,11 +30,11 @@ set(coreSources   main.cpp )
 add_executable(${targetName} ${coreSources} )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-                           ${PROJECT_BINARY_DIR}
-                           ${GTEST_INCLUDE_DIR}
+                           "${PROJECT_BINARY_DIR}"
+                           ${GTEST_INCLUDE_DIRS}
                            )
 
-target_link_libraries(${targetName} PUBLIC libgtest.a libgtest_main.a )
+target_link_libraries(${targetName} PUBLIC ${GTEST_BOTH_LIBRARIES}  )
 
 target_compile_options(${targetName} PRIVATE
                         -Wall
