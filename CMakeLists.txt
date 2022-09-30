@@ -23,7 +23,6 @@ ADD_DEFINITIONS(-DG_TEST_RUN=${G_TEST_RUN})
 
 set(coreSources   main.cpp )
 
-
 add_executable(${targetName} ${coreSources} )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -38,6 +37,5 @@ target_compile_options(${targetName} PRIVATE
                         -g
 
                       )
-
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
